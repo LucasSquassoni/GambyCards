@@ -14,7 +14,7 @@ namespace GambyCards.Cards
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
             gun.projectileSpeed = 0.75f;
-            gun.projectileSize = 1.5f;
+            gun.projectileSize = 1.75f;
             gun.damage = 1.25f;
         }
 
@@ -51,7 +51,7 @@ namespace GambyCards.Cards
                 {
                     positive = true,
                     stat = "Bullet Size",
-                    amount = "+50%",
+                    amount = "+75%",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 },
                 new CardInfoStat()

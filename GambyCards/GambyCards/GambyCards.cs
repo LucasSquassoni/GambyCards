@@ -18,7 +18,7 @@ namespace GambyCards
     {
         private const string ModId = "com.gambyte.rounds.GambyCards";
         private const string ModName = "GambyCards";
-        private const string Version = "0.1.1";
+        private const string Version = "0.2.0";
 
         public const string ModInitials = "GC";
         public static GambyCards instance { get; set; }
@@ -40,6 +40,7 @@ namespace GambyCards
             //CustomCard.BuildCard<BouncyBombs>();
             CustomCard.BuildCard<Blunderbuss>();
             //CustomCard.BuildCard<RunnyBullets>();
+            CustomCard.BuildCard<Springs>();
         }
     }
 }

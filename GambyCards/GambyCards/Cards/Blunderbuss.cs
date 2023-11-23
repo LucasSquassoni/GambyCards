@@ -15,10 +15,9 @@ namespace GambyCards.Cards
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
             gun.numberOfProjectiles = 10;
-            gun.ammo = 10;
             gun.damage = 0.5f;
             gun.spread = 0.5f;
-            gun.reloadTimeAdd = 0.75f;
+            gun.reloadTimeAdd = 0.5f;
             gun.destroyBulletAfter = 0.3f;
             gun.gravity = 0;
         }
@@ -67,13 +66,6 @@ namespace GambyCards.Cards
                 },
                 new CardInfoStat()
                 {
-                    positive = true,
-                    stat = "Ammo",
-                    amount = "+10",
-                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
-                },
-                new CardInfoStat()
-                {
                     positive = false,
                     stat = "Damage",
                     amount = "-50%",
@@ -83,7 +75,7 @@ namespace GambyCards.Cards
                 {
                     positive = false,
                     stat = "Reload Time",
-                    amount = "+0.75s",
+                    amount = "+0.5s",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 },
             };

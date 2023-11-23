@@ -9,13 +9,12 @@ using UnityEngine;
 
 namespace GambyCards.Cards
 {
-    class HeliumBullets : CustomCard
+    class IcyBullet : CustomCard
     {
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
-            cardInfo.allowMultiple = false;
-            gun.projectileSize = 1.5f;
-            gun.gravity = -1;            
+            gun.projectileSpeed = 1.75f;
+            gun.reloadTimeAdd = 0.25f;
         }
 
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
@@ -30,12 +29,12 @@ namespace GambyCards.Cards
 
         protected override string GetTitle()
         {
-            return "Helium Bullets";
+            return "Frictionless Bullet";
         }
 
         protected override string GetDescription()
         {
-            return "Your bullets defy gravity";
+            return "Bullets make your opponents slippery on hit.";
         }
 
         protected override CardInfo.Rarity GetRarity()
@@ -50,15 +49,15 @@ namespace GambyCards.Cards
                 new CardInfoStat()
                 {
                     positive = true,
-                    stat = "Projectile Size",
-                    amount = "+50%",
+                    stat = "Bullet Speed",
+                    amount = "+75%",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
-                },
+                },                           
                 new CardInfoStat()
                 {
-                    positive = true,
-                    stat = "Bullet Gravity",
-                    amount = "-1",
+                    positive = false,
+                    stat = "Reload Time",
+                    amount = "0.25s",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
             };
