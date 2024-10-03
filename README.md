@@ -1,0 +1,1 @@
+GambyCards is a mod for the game ROUNDS that enhances gameplay by introducing a variety of new cards, offering players a more dynamic and customizable experience. Developed in C#, this mod expands the strategic possibilities within the game, making each session even more engaging and fun.
